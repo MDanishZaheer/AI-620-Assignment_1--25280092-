@@ -1,0 +1,55 @@
+2026-02-16 02:19:45,701 | INFO | __main__ | Pipeline started
+2026-02-16 02:19:45,854 | INFO | code_files.extract.extract_kaggle | Kaggle download starting | dataset=atharvasoundankar/global-cybersecurity-threats-2015-2024 | dir=data\raw\kaggle
+2026-02-16 02:19:47,350 | INFO | code_files.extract.extract_kaggle | Kaggle download finished
+2026-02-16 02:19:47,350 | INFO | __main__ | Downloaded Kaggle zip to: data\raw\kaggle\global-cybersecurity-threats-2015-2024.zip
+2026-02-16 02:19:47,351 | INFO | code_files.extract.extract_pytrends | Pytrends download starting(chunked raw) | keywords=['cybersecurity', 'SQL injection', 'ransomware', 'phishing'] | start=2020-01-01 | end=2026-01-01
+2026-02-16 02:19:48,495 | INFO | code_files.extract.extract_pytrends | Requesting chunk 1 | timeframe=2020-01-01 2021-12-31
+2026-02-16 02:19:50,846 | INFO | code_files.extract.extract_pytrends | Chunk received | request_start=2020-01-01 | request_end=2021-12-31 | rows=104 | first=2020-01-05 | last=2021-12-26
+2026-02-16 02:19:50,847 | INFO | code_files.extract.extract_pytrends | Rate limit wait | seconds=3
+2026-02-16 02:19:53,849 | INFO | code_files.extract.extract_pytrends | Requesting chunk 2 | timeframe=2022-01-01 2023-12-31
+2026-02-16 02:19:56,209 | INFO | code_files.extract.extract_pytrends | Chunk received | request_start=2022-01-01 | request_end=2023-12-31 | rows=105 | first=2022-01-02 | last=2023-12-31
+2026-02-16 02:19:56,209 | INFO | code_files.extract.extract_pytrends | Rate limit wait | seconds=3
+2026-02-16 02:19:59,212 | INFO | code_files.extract.extract_pytrends | Requesting chunk 3 | timeframe=2024-01-01 2025-12-31
+2026-02-16 02:20:01,536 | INFO | code_files.extract.extract_pytrends | Chunk received | request_start=2024-01-01 | request_end=2025-12-31 | rows=104 | first=2024-01-07 | last=2025-12-28
+2026-02-16 02:20:01,539 | INFO | code_files.extract.extract_pytrends | Pytrends data saved | rows=313 | cols=5
+2026-02-16 02:20:01,540 | INFO | __main__ | Saved pytrends CSV at: data\raw\pytrends\pytrends_2020_2025.csv
+2026-02-16 02:20:01,540 | INFO | code_files.extract.extract_ransomware_live | Ransomware.live request starting | url=https://api.ransomware.live/v2/allcyberattacks
+2026-02-16 02:20:27,187 | INFO | code_files.extract.extract_ransomware_live | Ransomware.live response received | status=200
+2026-02-16 02:20:27,248 | INFO | code_files.extract.extract_ransomware_live | Ransomware_live saved
+2026-02-16 02:20:27,250 | INFO | __main__ | Saved ransomware json to: data\raw\ransomware_live\allcyberattacks.json
+2026-02-16 02:20:27,252 | INFO | code_files.extract.extract_nvd | NVD request starting | keyword=sql injection | resultsPerPage=5
+2026-02-16 02:20:28,447 | INFO | code_files.extract.extract_nvd | NVD response received | status=200
+2026-02-16 02:20:28,448 | INFO | code_files.extract.extract_nvd | NVD raw saved | bytes=15815
+2026-02-16 02:20:28,449 | INFO | __main__ | Saved NVD raw response to: data/raw/nvd_raw\nvd_raw_20260216_022028.json
+2026-02-16 02:20:28,449 | INFO | code_files.processed.process_kaggle | Kaggle processing started | zip=data\raw\kaggle\global-cybersecurity-threats-2015-2024.zip
+2026-02-16 02:20:28,465 | INFO | code_files.processed.process_kaggle | Found CSV: Global_Cybersecurity_Threats_2015-2024.csv
+2026-02-16 02:20:28,480 | INFO | code_files.processed.process_kaggle | Loaded CSV 
+2026-02-16 02:20:28,497 | INFO | code_files.processed.process_kaggle | Saved processed CSV.
+2026-02-16 02:20:28,497 | INFO | code_files.processed.process_kaggle | Saved processed JSON.
+2026-02-16 02:20:28,497 | INFO | __main__ | Kaggle processed CSV: data\processed\kaggle\Global_Cybersecurity_Threats_2015-2024.csv
+2026-02-16 02:20:28,497 | INFO | __main__ | Kaggle processed JSON: data\processed\kaggle\Global_Cybersecurity_Threats_2015-2024.json
+2026-02-16 02:20:28,498 | INFO | code_files.processed.process_pytrends | Pytrends processing started | input=data\raw\pytrends\pytrends_2020_2025.csv
+2026-02-16 02:20:28,508 | INFO | code_files.processed.process_pytrends | Loaded pytrends
+2026-02-16 02:20:28,511 | INFO | code_files.processed.process_pytrends | Pytrends saved CSV
+2026-02-16 02:20:28,511 | INFO | code_files.processed.process_pytrends | Pytrends saved JSON
+2026-02-16 02:20:28,511 | INFO | __main__ | Pytrends processed CSV: data\processed\pytrends\pytrends_2020_2025.csv
+2026-02-16 02:20:28,511 | INFO | __main__ | Pytrends processed JSON: data\processed\pytrends\pytrends_2020_2025.json
+2026-02-16 02:20:28,512 | INFO | code_files.processed.process_ransomware_live | Ransomware processing started | input=data/raw/ransomware_live/allcyberattacks.json
+2026-02-16 02:20:28,666 | INFO | code_files.processed.process_ransomware_live | Ransomware saved CSV
+2026-02-16 02:20:28,667 | INFO | code_files.processed.process_ransomware_live | Ransomware saved JSON
+2026-02-16 02:20:28,669 | INFO | __main__ | Ransomware processed CSV: data/processed/ransomware/allcyberattacks.csv
+2026-02-16 02:20:28,669 | INFO | __main__ | Ransomware processed JSON: data/processed/ransomware/allcyberattacks.json
+2026-02-16 02:20:28,670 | INFO | code_files.processed.process_nvd | NVD processing started | input=data/raw/nvd_raw\nvd_raw_20260216_022028.json
+2026-02-16 02:20:28,695 | INFO | code_files.processed.process_nvd | NVD saved JSON
+2026-02-16 02:20:28,695 | INFO | code_files.processed.process_nvd | NVD saved CSV 
+2026-02-16 02:20:28,695 | INFO | __main__ | NVD saved JSON: data/processed/nvd\nvd.json
+2026-02-16 02:20:28,696 | INFO | __main__ | NVD saved CSV: data/processed/nvd\nvd.csv
+2026-02-16 02:20:28,696 | INFO | papermill | Input Notebook:  code_files\transformation\processed_data_transformation.ipynb
+2026-02-16 02:20:28,696 | INFO | papermill | Output Notebook: code_files\transformation\processed_data_transformation.ipynb
+2026-02-16 02:20:30,355 | INFO | papermill | Executing notebook with kernel: data_engg
+2026-02-16 02:20:31,804 | INFO | __main__ | Transformation notebook executed
+2026-02-16 02:20:31,804 | INFO | papermill | Input Notebook:  visualizations\visualization_code_file.ipynb
+2026-02-16 02:20:31,804 | INFO | papermill | Output Notebook: visualizations\visualization_code_file.ipynb
+2026-02-16 02:20:33,080 | INFO | papermill | Executing notebook with kernel: data_engg
+2026-02-16 02:20:36,656 | INFO | __main__ | Visualization notebook executed
+2026-02-16 02:20:36,656 | INFO | __main__ | Pipeline finished

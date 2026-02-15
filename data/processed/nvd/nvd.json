@@ -1,0 +1,27 @@
+[
+  {
+    "id": "CVE-2000-1233",
+    "published": "2000-12-31T05:00:00.000",
+    "desc": "SQL injection vulnerability in read.php3 and other scripts in Phorum 3.0.7 allows remote attackers to execute arbitrary SQL queries via the sSQL parameter."
+  },
+  {
+    "id": "CVE-2000-1236",
+    "published": "2000-12-31T05:00:00.000",
+    "desc": "SQL injection vulnerability in mod_sql in Oracle Internet Application Server (IAS) 3.0.7 and earlier allows remote attackers to execute arbitrary SQL commands via the query string of the URL."
+  },
+  {
+    "id": "CVE-2001-1348",
+    "published": "2001-05-28T04:00:00.000",
+    "desc": "TWIG 2.6.2 and earlier allows remote attackers to perform unauthorized database operations via a SQL injection attack on the id parameter."
+  },
+  {
+    "id": "CVE-2001-1472",
+    "published": "2001-08-03T04:00:00.000",
+    "desc": "SQL injection vulnerability in prefs.php in phpBB 1.4.0 and 1.4.1 allows remote authenticated users to execute arbitrary SQL commands and gain administrative access via the viewemail parameter."
+  },
+  {
+    "id": "CVE-2001-1379",
+    "published": "2001-08-29T04:00:00.000",
+    "desc": "The PostgreSQL authentication modules (1) mod_auth_pgsql 0.9.5, and (2) mod_auth_pgsql_sys 0.9.4, allow remote attackers to bypass authentication and execute arbitrary SQL via a SQL injection attack on the user name."
+  }
+]
