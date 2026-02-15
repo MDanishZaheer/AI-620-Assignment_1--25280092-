@@ -43,7 +43,7 @@ python -m ipykernel install --user --name data_engg --display-name "Python (data
 
 ## Step: 4 Add .env file for API keys
 
-The `.env` file in project root already exists without APIs add keys otherwise keys will be asked at runtime on terminal:
+The `.env` file is needs to be added at root with the following pattern below:
 
 ```env
 KAGGLE_USERNAME="your_username"
